@@ -1,22 +1,79 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# ==========================================
+# 1. Data & Datasets (فایل‌های حجیم داده)
+# ==========================================
+*.csv
+*.tsv
+*.dat
+*.pkl
+*.pickle
+*.h5
+*.npy
+*.npz
+*.parquet
+
+# (اختیاری) اگر می‌خواهید کل پوشه دیتا نادیده گرفته شود اما خود پوشه بماند
+# داده‌های خام و پردازش شده را ایگنور می‌کند
+data/*
+!data/.gitkeep
+
+# ==========================================
+# 2. Archives & Media (فایل‌های فشرده و مدیا)
+# ==========================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.mp4
+*.png
+*.jpg
+*.jpeg
+
+# ==========================================
+# 3. Machine Learning Models (مدل‌های ذخیره شده)
+# ==========================================
+*.model
+*.joblib
+*.pt
+*.pth
+*.keras
+*.weights
+*.pb
+*.onnx
+# اگر مدل‌های LightGBM را با پسوند txt ذخیره می‌کنید:
+# *_model.txt 
+
+# ==========================================
+# 4. Jupyter Notebooks & Python Caches (فایل‌های موقت)
+# ==========================================
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# ==========================================
+# 5. Environments (محیط‌های مجازی)
+# ==========================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# 6. OS & IDE (فایل‌های سیستم‌عامل و ادیتورها)
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# VS Code
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+*.code-workspace
